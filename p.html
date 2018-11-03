@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  
+  </script>
+<style>
+body {
+    margin:0;
+    padding:0;
+	background:url()
+    background-size:cover;
+}
+.search {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:80px;
+    height:80px;
+    background:#fff;
+    box-shadow:0 5px 20px rgba(0,0,0,.5);
+    border-radius:4px;
+    transition:width .5s;
+    overflow:hidden;
+}
+.search.active {
+    width:600px;
+}
+.search input {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:calc(100% - 90px);
+    height:60px;
+    border:none;
+    outline:none;
+    font-size:36px;
+    padding:0 10px;
+    color:#666;
+    
+}
+.search.active .icon {
+    background:#ff355a;
+}
+.icon {
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:60px;
+    height:60px;
+    cursor:pointer;
+    transition:.5s;
+    border-radius:4px;
+}
+
+.image-upload > input {
+  visibility:hidden;
+  width:0;
+  height:0
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+	
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: blue;
+	
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.login-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 10px;
+  margin-right: 16px;
+  font-color:red;
+  font-size:11px;
+  width:60px;
+  height:30px;
+  
+  border: 1px solid green;
+  cursor: pointer;
+  
+ }
+  .login-container button:hover {
+  background: green;
+}
+</style>
+<body bgcolor="white">
+
+<div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">LOGO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">About Company</a>
+              <a class="dropdown-item" href="#">Our Skills</a>
+              <a class="dropdown-item disabled" href="#">our Team</a>
+            </div>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+		<div class="login-container">
+    
+      <button type="submit" onclick="location.href='6.html'" class="btn btn-outline-success my-2 my-sm-0">Logout</button>
+      </div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+	<div>
+</div>
+<div class="sidenav" style="margin-top:50px;">
+  <a href="#about">Edit Profile</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+<div class="container" style="margin-top:-1x;" >
+  <ul class="nav nav-tabs" style="background-color:black; margin-top:100px;" >
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Profile</a></li>
+    <li><a data-toggle="tab" href="#menu2">Upload file</a></li>
+	
+  </ul>
+
+  <div class="tab-content" >
+    <div id="home" class="tab-pane fade in active"  class="nav-link active"  data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+      <h3>HOME</h3>
+      <p>Some content.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Profile</h3>
+		<div class="image-upload"><form>
+ 		 <label for="file-input"><figure>
+  		  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYZ57kVpP1Qym72JmSap5yhdxddiBRsbVpdiT9DyH4AWyDWElE" style="pointer-events: none"/>
+		<figcaption><center> &nbsp;&nbsp;Change Profile Picture<center></figcaption></figure>
+  		</label>
+  
+ 
+ 		  <input id="file-input" type="file"  style="display:none" /></form>
+
+
+<button type="submit" form="nameform" value="Submit">SAVE</button>
+
+
+
+<div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <label>User Id</label>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <p>Kshiti123</p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <label>Name</label>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <p>Kshiti Ghelani</p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <label>Email</label>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <p>kshitighelani@gmail.com</p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <label>Phone</label>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <p>123 456 7890</p>
+
+                                            </div>
+
+                                        </div>
+
+                                        
+
+
+	
+
+
+
+	</div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Upload file</h3>
+      <p>Some content in menu 2.</p>
+	  <div class="image-upload">
+  <label for="file-input"><figure>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymSziU5glPV37Ej85Ux6gRtPWni0Di1NOzO0iqNRHpyyutuK3BA" style="pointer-events: none"/>
+	<figcaption><center> &nbsp;&nbsp;Upload file<center></figcaption></figure>
+  </label>
+  
+
+  <input id="file-input" type="file"  style="display:none" /></div>
+	<p class="proile-rating">RANKINGS : <span>8/10</span></p>
+
+<div class="container well">
+   
+	<form>
+    
+		<div class="form-group">
+      
+		<label for="usr">Book Name</label>
+
+	      <input type="text" class="form-control" id="usr">
+		
+    </div>
+    
+		<div class="form-group">
+		
+      <label for="pwd">Description</label>
+		
+      <input type="text" class="form-control" id="pwd">
+    
+			</div>
+	</form>	
+
+</div>
+
+</div></div>
+    
+	
+  </div>
+</div>
+
+</body>
+</html>
