@@ -21,14 +21,15 @@ if($link === false){
 // Attempt create table query execution
 
 $sql = "create table user(
-	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	id INT NOT NULL  AUTO_INCREMENT,
 
     name CHAR(30) NOT NULL,
 	dob DATE,
 	email VARCHAR(40) NOT NULL,
 	password VARCHAR(20) NOT NULL,
 	mob VARCHAR(10) NOT NULL,
-	image char(30) NOT NULL
+	image char(30) NOT NULL,
+	PRIMARY KEY(id,email)
 
 
     
