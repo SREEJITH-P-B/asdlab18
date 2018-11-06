@@ -20,21 +20,24 @@ if($link === false){
 
 // Attempt create table query execution
 
-$sql = "create table user(
-	id INT NOT NULL UNIQUE  AUTO_INCREMENT,
+$sql = "create table rating(
+	bookid		INT NOT NULL,
 
-    name CHAR(30) NOT NULL,
-	dob DATE,
-	email VARCHAR(40) PRIMARY KEY  NOT NULL,
-	password VARCHAR(20) NOT NULL,
-	mob VARCHAR(10) NOT NULL,
-	image char(30) NOT NULL,
-	balance INT DEFAULT '20'
+   	rate 		INT NOT NULL,
+	comment 	VARCHAR(20) NOT NULL,
+	email		VARCHAR(40) NOT NULL,
+	
+	
+	
+	
+	FOREIGN KEY(bookid)  REFERENCES book (bookid),
+	FOREIGN KEY(email)  REFERENCES user (email)
+	
+
 
     
 
 )";
-//INSERT INTO persons (first_name, last_name, email) VALUES ('Peter', 'Parker', 'peterparker@mail.com')";
 
 if(mysqli_query($link, $sql)){
 

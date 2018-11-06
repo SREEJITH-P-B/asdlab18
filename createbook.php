@@ -20,16 +20,20 @@ if($link === false){
 
 // Attempt create table query execution
 
-$sql = "create table user(
-	id INT NOT NULL UNIQUE  AUTO_INCREMENT,
+$sql = "create table book(
+	bookid INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 
-    name CHAR(30) NOT NULL,
-	dob DATE,
-	email VARCHAR(40) PRIMARY KEY  NOT NULL,
-	password VARCHAR(20) NOT NULL,
-	mob VARCHAR(10) NOT NULL,
-	image char(30) NOT NULL,
-	balance INT DEFAULT '20'
+    book CHAR(30) NOT NULL,
+	description VARCHAR(40) ,
+	
+	subject VARCHAR(20) NOT NULL,
+	email VARCHAR(40)NOT NULL,
+	
+	file char(50) NOT NULL,
+	amt INT NOT NULL,
+	FOREIGN KEY (email)  REFERENCES user (email) ON DELETE CASCADE
+	
+
 
     
 
